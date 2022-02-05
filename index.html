@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+
+<title>Projekt 2</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="rest.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>COVID-19</h1>
+        </div>
+        
+    </header>
+    <div class="navigator">
+        <button class="tablinks" onclick="openTab(event, 'Forma')">Ankieta</button>
+        <button class="tablinks" onclick="set_results(); openTab(event, 'Wyniki') ">Wyniki</button>
+        <button class="tablinks" id="login" onclick="openTab(event, 'Login')">Zaloguj się</button>
+        <div id="hidden_button"></div>
+        <button class="tablinks" id="logout" onclick="openTab(event, 'Login'); _logout()" style="display: none;">Wyloguj się</button>
+      
+    </div>
+    <div id="container">
+    <div class="formdiv tabcontent" id='Forma'>
+        <form name="form1"  method="POST" >
+            <div class="question">
+                <p>Podaj Swój wiek.</p>
+                <input id="wiekowy" name="age" type="number"/>
+            </div>
+           
+            <div class="question">
+                <p>Czy szczepiłeś się przeciwko COVID-19?</p>
+                <div>
+                <input type="radio" id="ans1" name="question_1" value="A">
+                <label for="ans1">A. Tak</label>
+                </div>
+
+                <div>
+                <input type="radio" id="ans2" name="question_1" value="B">
+                <label for="ans2">B. Nie</label>
+                </div>
+
+                <div>
+                <input type="radio" id="ans3" name="question_1" value="C">
+                <label for="ans3">C. Mam umówiony rermin szczepienia / Zamierzam się wkrótcę zaszczepić</label>
+                </div>
+            </div>
+                 
+            <div class="question">
+                <p>Jaki jest powód dla którego się szczepiłeś / jaki miałby być powód abyś się zaszczepił?</p>
+                <div>
+                <input type="radio" id="ans11" name="question_2" value="A">
+                <label for="ans11">A. Ochrona przed przebiegiem COVID-19</label>
+                </div>
+
+                <div>
+                <input type="radio" id="ans22" name="question_2" value="B">
+                <label for="ans22">B. Wymagane w pracy</label>
+                </div>
+
+                <div>
+                <input type="radio" id="ans32" name="question_2" value="C">
+                <label for="ans32">C. Inny...</label>
+                </div>
+            </div>
+                
+
+
+            <input type="button" name="B1" value="Zapisz"  onclick="save_answers()" />
+            <p>Należy odpowiedzieć na każde pytanie!</p>
+            <p id="result1">
+
+          </p>
+        </form>
+    </div>
+
+    <div class="formdiv tabcontent" id='Login'>
+        <form name="form2"  method="POST" >
+            <div class="login">
+                <p>Login*</p>
+                <input name="login" id ="log" type="text" size="30" />
+            </div>
+            <div class="login">
+                <p>Hasło*</p>
+                <input name="haslo" id="pass" type="text" size="30" />
+            </div>
+            <input type="button" name="B2" value="Zaloguj"  onclick="_login()" />
+            <p>Bądź</p>
+            <input type="button" name="B3" value="Zarejestruj" onclick="_register()" />
+            <p id="result">
+
+          </p>
+        </form>
+
+
+    </div>
+
+    <div class="formdiv tabcontent" id='Wyniki'>
+        
+        <p id="result2">
+
+        <p id="data"></p>
+         
+         <div id="onlineRes">
+           <div id="chart1" class="charts"></div>
+           <div id="chart2" class="charts"></div>
+           <div id="chart3" class="charts"></div>
+         </div>
+         
+    </div>
+    </div>
+
+</body>
+
+</html>

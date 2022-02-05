@@ -1,0 +1,140 @@
+body {
+    background-image: url("Covid.png");
+    opacity: 0.98;
+}
+
+.title
+{
+    background-color: aliceblue;
+    border: 3px solid  aquamarine;
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    border-radius: 15px;
+    
+}
+
+.navigator {
+    margin-top: 25px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 900px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 1%;
+    border-radius: 15px;
+}
+
+.navigator button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.navigator button.active {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.tabcontent {
+    display: none;
+    padding: 0%;
+}
+
+button#login{
+   float: right;
+   margin-right: 20px;
+}
+button#logout{
+    float: right;
+    margin-right: 20px;
+ }
+
+ button#zardane
+ {
+    margin-left: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+ }
+ #container {
+
+    font-size: 24px;
+    /* Center vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    margin:0% auto;
+    
+  }
+.formdiv {
+    width: 900px;
+}
+
+form {
+    text-align: center;
+    font-size: 20px;
+    background-color: #E5FFFA;
+    padding: 1%;
+}
+
+form input
+{
+    width: 200px;
+    padding: 1%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: #FFFFCC;
+}
+#Wyniki{
+    text-align: left;
+    background-color: #E5FFFA;
+    font-size: 20px;
+    padding: 0%;
+}
+#wiekowy, #log, #pass
+{
+    padding: 1%;
+    width: 200px;
+    background-color: white;
+}
+.question{
+    text-align: left;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+
+.question input
+{
+    background-color: white;
+    padding: 1%;
+    width: 30px;
+}
+
+
+p{
+    margin: 5px;
+}
+
+#result, #result1, #result2{
+   color: red;
+}
+
+.charts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0%;
+    margin:0% auto;
+    max-width:850px;
+    margin: 50px auto;
+}
+
+
